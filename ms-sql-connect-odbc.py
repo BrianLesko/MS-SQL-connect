@@ -17,6 +17,8 @@ conn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};\
 
 cursor = conn.cursor()
 
-query = "SELECT * FROM MSreplication_option"
-conn.close
-#cursor.execute(query)
+integer_variable = 1
+query = "SELECT * FROM table_name WHERE printer = %d"
+cursor.execute(query,integer_variable)
+result = cursor.fetchall()
+print(result)

@@ -1,5 +1,5 @@
-# Brian Lesko 
-# 
+# Brian Lesko
+# This script does not successfully connect to the MS SQL database when tested on my machine.
 
 import pymssql
 

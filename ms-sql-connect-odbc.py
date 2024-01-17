@@ -23,7 +23,7 @@ conn = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};\
 cursor = conn.cursor()
 
 integer_variable = 1
-query = "SELECT * FROM table_name WHERE printer = %d"
-cursor.execute(query,integer_variable)
-result = cursor.fetchall()
-print(result)
+# = "SELECT * FROM table_name WHERE printer = %d"
+#cursor.execute(query,integer_variable)
+#result = cursor.fetchall()
+#print(result)

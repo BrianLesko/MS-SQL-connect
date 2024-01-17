@@ -1,7 +1,7 @@
 import mysql.connector
 
 mydb = mysql.connector.connect(
-    host = 'localhost',
+    host = '192.168.129.60', # to make the server accessible from more than just 'localhost' you must change the bind address in the config file
     user = 'lesko',
     password = 'lesko',
     database = 'test_db'

@@ -9,12 +9,12 @@ username = 'lesko'
 password = 'lesko'
 database = 'PlatformDatabase'
 
-connectionString = f'DRIVER={{ODBC Driver 18 for SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password};TrustServerCertificate=yes;Encrypt=no'
+connectionString = f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password};TrustServerCertificate=yes;'
 conn = pyodbc.connect(connectionString)
 
 # Connect to the database
 '''
-conn = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};\
+conn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};\
                         SERVER='+server+';\
                         DATABASE='+database+';\
                         UID='+username+';\
@@ -23,7 +23,8 @@ conn = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};\
 cursor = conn.cursor()
 
 integer_variable = 1
-# = "SELECT * FROM table_name WHERE printer = %d"
-#cursor.execute(query,integer_variable)
-#result = cursor.fetchall()
-#print(result)
+query = "SELECT * FROM Printers"
+cursor.execute(query)
+results = cursor.fetchall()
+for result in results:
+    print(result)

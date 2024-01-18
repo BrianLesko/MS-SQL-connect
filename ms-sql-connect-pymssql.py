@@ -3,10 +3,10 @@
 
 import pymssql
 
-server = '3JZDHW3\SQLEXPRESS'
+server = '192.168.129.2\SQLEXPRESS'
 user = 'lesko'
 password = 'lesko'
-database = 'master'
+database = 'PlatformDatabase'
 
 
 # Connect to the database

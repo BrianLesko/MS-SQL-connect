@@ -9,7 +9,7 @@ username = 'lesko'
 password = 'lesko'
 database = 'PlatformDatabase'
 
-connectionString = f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password};TrustServerCertificate=yes;'
+connectionString = f'DRIVER={{ODBC Driver 18 for SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password};TrustServerCertificate=yes;'
 conn = pyodbc.connect(connectionString)
 
 # Connect to the database
